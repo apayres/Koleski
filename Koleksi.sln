@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksi.Web", "Koleksi.Web\Koleksi.Web.csproj", "{916B95B6-BDF0-4EDE-88F2-DDEA9063B3E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksi.Services", "Koleksi.Services\Koleksi.Services.csproj", "{CDCDB055-0870-4CFB-81BC-15A8767B50C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksi.Domain", "Koleksi.Domain\Koleksi.Domain.csproj", "{338494D7-A349-4753-824E-72ECA3238F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksi.Repository", "Koleksi.Repository\Koleksi.Repository.csproj", "{EB12F7A0-029E-41AB-A102-F9407D43C8D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{916B95B6-BDF0-4EDE-88F2-DDEA9063B3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916B95B6-BDF0-4EDE-88F2-DDEA9063B3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916B95B6-BDF0-4EDE-88F2-DDEA9063B3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916B95B6-BDF0-4EDE-88F2-DDEA9063B3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDCDB055-0870-4CFB-81BC-15A8767B50C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCDB055-0870-4CFB-81BC-15A8767B50C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDCDB055-0870-4CFB-81BC-15A8767B50C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDCDB055-0870-4CFB-81BC-15A8767B50C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{338494D7-A349-4753-824E-72ECA3238F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{338494D7-A349-4753-824E-72ECA3238F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{338494D7-A349-4753-824E-72ECA3238F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{338494D7-A349-4753-824E-72ECA3238F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB12F7A0-029E-41AB-A102-F9407D43C8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB12F7A0-029E-41AB-A102-F9407D43C8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB12F7A0-029E-41AB-A102-F9407D43C8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB12F7A0-029E-41AB-A102-F9407D43C8D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
