@@ -53,17 +53,6 @@
       <Name>Koleksi.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="CollectionData\Collections\Collection_POTF2.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CollectionData\Resources\CollectionImages\Collection_Image.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CollectionData\Resources\ItemImages\Item_Image.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
