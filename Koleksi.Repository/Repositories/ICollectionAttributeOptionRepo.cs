@@ -7,7 +7,7 @@ namespace Koleksi.Repository.Repositories
     {
         void DeleteCollectionAttributeOption(int collectionAttributeOptionID);
         List<CollectionAttributeOptionDTO> GetCollectionAttributeOptions(int collectionAttributeID);
-        CollectionAttributeOptionDTO InsertCollectionAttribute(CollectionAttributeOptionDTO item);
-        CollectionAttributeOptionDTO UpdateCollectionAttribute(CollectionAttributeOptionDTO item);
+        CollectionAttributeOptionDTO InsertCollectionAttributeOption(CollectionAttributeOptionDTO item);
+        CollectionAttributeOptionDTO UpdateCollectionAttributeOption(CollectionAttributeOptionDTO item);
     }
 }

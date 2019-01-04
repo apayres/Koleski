@@ -54,6 +54,8 @@
     <Compile Include="DataTranserObjects\ItemToCollectionDTO.cs" />
     <Compile Include="Implimentations\CollectionAttributeOptionRepo.cs" />
     <Compile Include="Implimentations\CollectionAttributeRepo.cs" />
+    <Compile Include="Implimentations\CollectionAttributeValueRepo.cs" />
+    <Compile Include="Repositories\ICollectionAttributeValueRepo.cs" />
     <Compile Include="Repositories\ICollectionAttributeOptionRepo.cs" />
     <Compile Include="Repositories\ICollectionAttributeRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

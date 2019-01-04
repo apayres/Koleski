@@ -5,20 +5,19 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
-
 namespace Koleksi.Repository.Implimentations
 {
-    public class CollectionAttributeOptionRepo : ICollectionAttributeOptionRepo
+    public class CollectionAttributeValueRepo : ICollectionAttributeValueRepo
     {
-        public List<CollectionAttributeOptionDTO> GetCollectionAttributeOptions(int collectionAttributeID)
+        public List<CollectionAttributeValueDTO> GetCollectionAttributeValues(int collectionAttributeID)
         {
-            List<CollectionAttributeOptionDTO> items = new List<CollectionAttributeOptionDTO>();
+            List<CollectionAttributeValueDTO> items = new List<CollectionAttributeValueDTO>();
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.DatabaseConnectoin))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "SELECT [CollectionAttributeOptionID], [DisplayLabel], [Value], [DisplayOrder], [CollectionAttributeID] FROM [dbo].[CollectionAttributeOption] WITH (NOLOCK) WHERE [CollectionAttributeID] = @CollectionAttributeID";
+                    command.CommandText = "SELECT [CollectionAttributeID], [CollectionAttributeValueID], [Value], [CollectionID] FROM [dbo].[CollectionAttributeValue] WITH (NOLOCK) WHERE [CollectionAttributeID] = @CollectionAttributeID";
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("CollectionAttributeID", collectionAttributeID);
 
@@ -38,42 +37,39 @@ namespace Koleksi.Repository.Implimentations
             return items;
         }
 
-        public CollectionAttributeOptionDTO InsertCollectionAttributeOption(CollectionAttributeOptionDTO item)
+        public CollectionAttributeValueDTO InsertCollectionAttributeValue(CollectionAttributeValueDTO item)
         {
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.DatabaseConnectoin))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "INSERT INTO [dbo].[CollectionAttributeOption] ([DisplayLabel], [Value], [DisplayOrder], [CollectionAttributeID]) VALUES (@DisplayLabel, @Value, @DisplayOrder, @CollectionAttributeID); SELECT @@IDENTITY AS [ID]";
+                    command.CommandText = "INSERT INTO [dbo].[CollectionAttributeValue] ([CollectionAttributeID], [CollectionID], [Value]) VALUES (@CollectionAttributeID, @CollectionID, @Value); SELECT @@IDENTITY AS [ID]";
                     command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@DisplayLabel", item.DisplayLabel);
-                    command.Parameters.AddWithValue("@Value", item.Value);
-                    command.Parameters.AddWithValue("@DisplayOrder", item.DisplayOrder);
                     command.Parameters.AddWithValue("@CollectionAttributeID", item.CollectionAttributeID);
-                    item.CollectionAttributeOptionID = Convert.ToInt32(command.ExecuteScalar());
-                }
-
-                connection.Close();
-                connection.Dispose();
-            }
-
-            return item;
-        }
-
-        public CollectionAttributeOptionDTO UpdateCollectionAttributeOption(CollectionAttributeOptionDTO item)
-        {
-            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.DatabaseConnectoin))
-            {
-                connection.Open();
-                using (SqlCommand command = new SqlCommand())
-                {
-                    command.CommandText = "UPDATE [dbo].[CollectionAttributeOption] SET [DisplayLabel] = @DisplayLabel, [Value] = @Value, [DisplayOrder] = @DisplayOrder WHERE [CollectionAttributeOptionID] = @CollectionAttributeOptionID";
-                    command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@DisplayLabel", item.DisplayLabel);
+                    command.Parameters.AddWithValue("@CollectionID", item.CollectionID);
                     command.Parameters.AddWithValue("@Value", item.Value);
-                    command.Parameters.AddWithValue("@DisplayOrder", item.DisplayOrder);
-                    command.Parameters.AddWithValue("@CollectionAttributeOptionID", item.CollectionAttributeOptionID);
+                    item.CollectionAttributeValueID = Convert.ToInt32(command.ExecuteScalar());
+                }
+
+                connection.Close();
+                connection.Dispose();
+            }
+
+            return item;
+        }
+
+        public CollectionAttributeValueDTO UpdateCollectionAttributeValue(CollectionAttributeValueDTO item)
+        {
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.DatabaseConnectoin))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.CommandText = "UPDATE [dbo].[CollectionAttributeValue] SET [Value] = @Value WHERE [CollectionAttributeValueID] = @CollectionAttributeValueID";
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.AddWithValue("@Value", item.Value);
+                    command.Parameters.AddWithValue("@CollectionAttributeValueID", item.CollectionAttributeValueID);
                     command.ExecuteNonQuery();
                 }
 
@@ -84,16 +80,16 @@ namespace Koleksi.Repository.Implimentations
             return item;
         }
 
-        public void DeleteCollectionAttributeOption(int collectionAttributeOptionID)
+        public void DeleteCollectionAttributeValue(int collectionAttributeValueID)
         {
             using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.DatabaseConnectoin))
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = @" DELETE FROM [dbo].[CollectionAttributeOption] WHERE [CollectionAttributeOptionID] = @CollectionAttributeOptionID";
+                    command.CommandText = @" DELETE FROM [dbo].[CollectionAttributeValue] WHERE [CollectionAttributeValueID] = @CollectionAttributeValueID";
                     command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@CollectionAttributeOptionID", collectionAttributeOptionID);
+                    command.Parameters.AddWithValue("@CollectionAttributeValueID", collectionAttributeValueID);
                     command.ExecuteNonQuery();
                 }
 
@@ -102,14 +98,13 @@ namespace Koleksi.Repository.Implimentations
             }
         }
 
-        private static CollectionAttributeOptionDTO Populate(SqlDataReader reader)
+        private static CollectionAttributeValueDTO Populate(SqlDataReader reader)
         {
-            CollectionAttributeOptionDTO obj = new CollectionAttributeOptionDTO()
+            CollectionAttributeValueDTO obj = new CollectionAttributeValueDTO()
             {
                 CollectionAttributeID = reader.GetInt32(reader.GetOrdinal("CollectionAttributeID")),
-                CollectionAttributeOptionID = reader.GetInt32(reader.GetOrdinal("CollectionAttributeOptionID")),
-                DisplayLabel = reader.GetString(reader.GetOrdinal("DisplayLabel")),
-                DisplayOrder = reader.GetInt32(reader.GetOrdinal("DisplayOrder")),
+                CollectionAttributeValueID = reader.GetInt32(reader.GetOrdinal("CollectionAttributeValueID")),
+                CollectionID = reader.GetInt32(reader.GetOrdinal("CollectionID")),
                 Value = reader.GetString(reader.GetOrdinal("Value"))
             };
 
