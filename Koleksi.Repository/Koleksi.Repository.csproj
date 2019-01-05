@@ -55,6 +55,12 @@
     <Compile Include="Implimentations\CollectionAttributeOptionRepo.cs" />
     <Compile Include="Implimentations\CollectionAttributeRepo.cs" />
     <Compile Include="Implimentations\CollectionAttributeValueRepo.cs" />
+    <Compile Include="Implimentations\CollectionImageRepo.cs" />
+    <Compile Include="Implimentations\CollectionRelationshipRepo.cs" />
+    <Compile Include="Implimentations\CollectionRepo.cs" />
+    <Compile Include="Repositories\ICollectionRelationshipRepo.cs" />
+    <Compile Include="Repositories\ICollectionImageRepo.cs" />
+    <Compile Include="Repositories\ICollectionRepo.cs" />
     <Compile Include="Repositories\ICollectionAttributeValueRepo.cs" />
     <Compile Include="Repositories\ICollectionAttributeOptionRepo.cs" />
     <Compile Include="Repositories\ICollectionAttributeRepo.cs" />
