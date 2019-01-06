@@ -58,6 +58,12 @@
     <Compile Include="Implimentations\CollectionImageRepo.cs" />
     <Compile Include="Implimentations\CollectionRelationshipRepo.cs" />
     <Compile Include="Implimentations\CollectionRepo.cs" />
+    <Compile Include="Repositories\IItemImageRepo.cs" />
+    <Compile Include="Implimentations\ItemImageRepo.cs" />
+    <Compile Include="Repositories\IItemToCollectionRepo.cs" />
+    <Compile Include="Implimentations\ItemToCollectionRepo.cs" />
+    <Compile Include="Repositories\IItemRepo.cs" />
+    <Compile Include="Implimentations\ItemRepo.cs" />
     <Compile Include="Repositories\ICollectionRelationshipRepo.cs" />
     <Compile Include="Repositories\ICollectionImageRepo.cs" />
     <Compile Include="Repositories\ICollectionRepo.cs" />
