@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksi.Domain", "Koleksi.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksi.Repository", "Koleksi.Repository\Koleksi.Repository.csproj", "{EB12F7A0-029E-41AB-A102-F9407D43C8D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleski.Api", "Koleski.Api\Koleski.Api.csproj", "{6EA8DBCF-DAF2-48E1-8945-B619EF519383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EB12F7A0-029E-41AB-A102-F9407D43C8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB12F7A0-029E-41AB-A102-F9407D43C8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB12F7A0-029E-41AB-A102-F9407D43C8D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA8DBCF-DAF2-48E1-8945-B619EF519383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA8DBCF-DAF2-48E1-8945-B619EF519383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA8DBCF-DAF2-48E1-8945-B619EF519383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA8DBCF-DAF2-48E1-8945-B619EF519383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
