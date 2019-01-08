@@ -2,7 +2,7 @@
 {
     public class ItemAttributeOptionDTO
     {
-        public int? itemAttributeOptionID { set; get; }
+        public int? ItemAttributeOptionID { set; get; }
 
         public string DisplayLabel { set; get; }
 

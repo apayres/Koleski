@@ -4,7 +4,7 @@
     {
         public int? ItemAttributeValueID { set; get; }
 
-        public int itemAttributeID { set; get; }
+        public int ItemAttributeID { set; get; }
 
         public string Value { set; get; }
 

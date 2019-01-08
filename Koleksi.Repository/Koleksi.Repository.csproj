@@ -58,6 +58,11 @@
     <Compile Include="Implimentations\CollectionImageRepo.cs" />
     <Compile Include="Implimentations\CollectionRelationshipRepo.cs" />
     <Compile Include="Implimentations\CollectionRepo.cs" />
+    <Compile Include="Implimentations\ItemAttributeValueRepo.cs" />
+    <Compile Include="Repositories\IItemAttributeRepo.cs" />
+    <Compile Include="Implimentations\ItemAttributeRepo.cs" />
+    <Compile Include="Repositories\IItemAttributeOptionRepo.cs" />
+    <Compile Include="Implimentations\ItemAttributeOptionRepo.cs" />
     <Compile Include="Repositories\IItemImageRepo.cs" />
     <Compile Include="Implimentations\ItemImageRepo.cs" />
     <Compile Include="Repositories\IItemToCollectionRepo.cs" />
