@@ -122,13 +122,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CollectionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Work\CollectionTasks\CollectionRetriever.cs" />
+    <Compile Include="Work\CollectionTasks\CollectionSaver.cs" />
+    <Compile Include="Work\CollectionTasks\ICollectionRetriever.cs" />
+    <Compile Include="Work\CollectionTasks\ICollectionSaver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Index.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -137,12 +143,19 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Work\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Koleksi.Domain\Koleksi.Domain.csproj">
+      <Project>{338494d7-a349-4753-824e-72eca3238f86}</Project>
+      <Name>Koleksi.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Koleksi.Services\Koleksi.Services.csproj">
+      <Project>{cdcdb055-0870-4cfb-81bc-15a8767b50c7}</Project>
+      <Name>Koleksi.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
