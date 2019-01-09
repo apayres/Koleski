@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Koleksi.Repository.Implimentations
 {
-    public class ItemAttributeValueRepo
+    public class ItemAttributeValueRepo : IItemAttributeValueRepo
     {
         public List<ItemAttributeValueDTO> GetItemAttributeValues(int ItemAttributeID)
         {

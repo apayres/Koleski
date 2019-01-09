@@ -37,6 +37,34 @@ namespace Koleksi.Repository.Implimentations
             return items;
         }
 
+        public CollectionDTO GetCollection(int collectionID)
+        {
+            CollectionDTO item = null;
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.DatabaseConnectoin))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.CommandText = "SELECT [CollectionID], [Name], [Description], [DisplayOrder] FROM [dbo].[Collection] WITH (NOLOCK) WHERE [CollectionID] = @CollectionID";
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.AddWithValue("@CollectionID", collectionID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            item = Populate(reader);
+                        }
+                    }
+                }
+
+                connection.Close();
+                connection.Dispose();
+            }
+
+            return item;
+        }
+        
         public List<CollectionDTO> GetCollections(int? parentCollectionID)
         {
             List<CollectionDTO> items = new List<CollectionDTO>();

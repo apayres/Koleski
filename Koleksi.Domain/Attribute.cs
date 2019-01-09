@@ -12,6 +12,6 @@ namespace Koleksi.Domain
 
         public List<AttributeValue> Options { set; get; }
 
-        public string Value { set; get; }
+        public List<object> Values { set; get; }
     }
 }

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Koleksi.Domain;
 using Koleksi.Web.Models.Home;
-using Koleksi.Services.Components;
+using Koleksi.Services.Components.Loaders;
 
 namespace Koleksi.Web.Controllers
 {
@@ -14,9 +14,8 @@ namespace Koleksi.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            CollectionComponent component = new CollectionComponent();
+            CollectionLoader component = new CollectionLoader();
             HomeModel model = new HomeModel();
-            model.MainCollections = component.LoadCollections();
             return View(model);
         }
     }

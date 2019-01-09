@@ -40,8 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\CollectionComponent.cs" />
-    <Compile Include="Components\ItemComponent.cs" />
+    <Compile Include="Components\Loaders\CollectionAttributeLoader.cs" />
+    <Compile Include="Components\Loaders\CollectionImageLoader.cs" />
+    <Compile Include="Components\Loaders\CollectionLoader.cs" />
+    <Compile Include="Components\Loaders\IAttributeLoader.cs" />
+    <Compile Include="Components\Loaders\ICollectionLoader.cs" />
+    <Compile Include="Components\Loaders\IImageLoader.cs" />
+    <Compile Include="Components\Loaders\IItemLoader.cs" />
+    <Compile Include="Components\Loaders\ItemAttributeLoader.cs" />
+    <Compile Include="Components\Loaders\ItemImageLoader.cs" />
+    <Compile Include="Components\Loaders\ItemLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +59,10 @@
     <ProjectReference Include="..\Koleksi.Domain\Koleksi.Domain.csproj">
       <Project>{338494d7-a349-4753-824e-72eca3238f86}</Project>
       <Name>Koleksi.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Koleksi.Repository\Koleksi.Repository.csproj">
+      <Project>{eb12f7a0-029e-41ab-a102-f9407d43c8d6}</Project>
+      <Name>Koleksi.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,6 +7,7 @@ namespace Koleksi.Repository.Repositories
     {
         void DeleteCollection(int collectionID);
         List<CollectionDTO> GetCollections();
+        CollectionDTO GetCollection(int collectionID);
         List<CollectionDTO> GetCollections(int? parentCollectionID);
         CollectionDTO InsertCollection(CollectionDTO item);
         CollectionDTO UpdateCollection(CollectionDTO item);
