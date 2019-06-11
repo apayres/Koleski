@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksi.Repository", "Kolek
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleski.Api", "Koleski.Api\Koleski.Api.csproj", "{6EA8DBCF-DAF2-48E1-8945-B619EF519383}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleksi.UnitTesting", "Koleksi.UnitTesting\Koleksi.UnitTesting.csproj", "{0A9C252E-22DC-42ED-8FF3-96F622FF8A0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koleski.IntegrationTesting", "Koleski.IntegrationTesting\Koleski.IntegrationTesting.csproj", "{CD0C98FF-B0B2-4301-B2BC-4521E0AD9F81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{927451CE-5C37-488F-801B-7CDBAAE09358}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,8 +45,20 @@ Global
 		{6EA8DBCF-DAF2-48E1-8945-B619EF519383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EA8DBCF-DAF2-48E1-8945-B619EF519383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EA8DBCF-DAF2-48E1-8945-B619EF519383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9C252E-22DC-42ED-8FF3-96F622FF8A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9C252E-22DC-42ED-8FF3-96F622FF8A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9C252E-22DC-42ED-8FF3-96F622FF8A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9C252E-22DC-42ED-8FF3-96F622FF8A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD0C98FF-B0B2-4301-B2BC-4521E0AD9F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD0C98FF-B0B2-4301-B2BC-4521E0AD9F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD0C98FF-B0B2-4301-B2BC-4521E0AD9F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD0C98FF-B0B2-4301-B2BC-4521E0AD9F81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A9C252E-22DC-42ED-8FF3-96F622FF8A0F} = {927451CE-5C37-488F-801B-7CDBAAE09358}
+		{CD0C98FF-B0B2-4301-B2BC-4521E0AD9F81} = {927451CE-5C37-488F-801B-7CDBAAE09358}
 	EndGlobalSection
 EndGlobal
